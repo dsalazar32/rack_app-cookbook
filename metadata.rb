@@ -1,9 +1,9 @@
-name             'rack_app-cookbook'
+name             'rack_app'
 maintainer       'David Salazar'
 maintainer_email 'dsalazar@iomediums.com'
 license          'All rights reserved'
-description      'Installs/Configures rack_app-cookbook'
-long_description 'Installs/Configures rack_app-cookbook'
+description      'Installs/Configures rack_app'
+long_description 'Installs/Configures rack_app'
 version          '0.1.0'
 
 depends 'packagecloud', '~> 0.0.17'

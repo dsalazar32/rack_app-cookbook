@@ -34,7 +34,6 @@ end
 end
 
 template "#{node[ns]['nginx']['dir']}/conf.d/passenger.conf" do
-  cookbook "ccapp_passenger"
   source 'passenger.conf.erb'
   mode   '0644'
   owner  'root'
