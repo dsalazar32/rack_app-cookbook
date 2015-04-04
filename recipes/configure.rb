@@ -37,7 +37,6 @@
 #end
 #
 
-include_recipe 'rack_app::_service'
 include_recipe 'nginx::commons'
 
 cookbook_file "#{node['nginx']['dir']}/mime.types" do
@@ -53,3 +52,5 @@ template "#{node['nginx']['dir']}/conf.d/passenger.conf" do
   owner  'root'
   group  node['root_group']
 end
+
+include_recipe 'rack_app::_service'
