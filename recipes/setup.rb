@@ -40,31 +40,31 @@ ruby_block 'setup environment variables' do
   end
 end
 
-directory node[ns]['nginx']['dir'] do
-  owner     'root'
-  group     node['root_group']
-  mode      '0755'
-  recursive true
-end
-
-directory node[ns]['nginx']['log_dir'] do
-  mode      '0755'
-  owner     node[ns]['nginx']['user']
-  action    :create
-  recursive true
-end
-
-directory File.dirname(node[ns]['nginx']['pid']) do
-  owner     'root'
-  group     node['root_group']
-  mode      '0755'
-  recursive true
-end
-
-%w(sites-available sites-enabled conf.d).each do |leaf|
-  directory File.join(node[ns]['nginx']['dir'], leaf) do
-    owner 'root'
-    group node['root_group']
-    mode  '0755'
-  end
-end
+# directory node[ns]['nginx']['dir'] do
+#   owner     'root'
+#   group     node['root_group']
+#   mode      '0755'
+#   recursive true
+# end
+# 
+# directory node[ns]['nginx']['log_dir'] do
+#   mode      '0755'
+#   owner     node[ns]['nginx']['user']
+#   action    :create
+#   recursive true
+# end
+# 
+# directory File.dirname(node[ns]['nginx']['pid']) do
+#   owner     'root'
+#   group     node['root_group']
+#   mode      '0755'
+#   recursive true
+# end
+# 
+# %w(sites-available sites-enabled conf.d).each do |leaf|
+#   directory File.join(node[ns]['nginx']['dir'], leaf) do
+#     owner 'root'
+#     group node['root_group']
+#     mode  '0755'
+#   end
+# end

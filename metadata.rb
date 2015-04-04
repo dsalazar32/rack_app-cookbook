@@ -7,4 +7,5 @@ long_description 'Installs/Configures rack_app'
 version          '0.1.0'
 
 depends 'packagecloud', '~> 0.0.17'
-depends 'runit'
+depends 'nginx', '~> 2.7.6'
+# depends 'runit'
