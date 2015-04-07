@@ -1,4 +1,4 @@
-include_recipe 'runit'
+include_recipe 'runit::default'
 
 runit_service 'nginx'
 

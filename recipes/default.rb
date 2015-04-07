@@ -21,9 +21,3 @@ end
 package node[ns]['omnibus_pkg_name'] do
   version "#{package_version.join('~')}-#{node[ns]['build_iteration']}"
 end
-
-# Need to generate this symlink because it seems that chef-client does not
-# respect the omnibus package directory.
-# link "/usr/bin/git" do
-#   to "#{node[ns]['install_path']}/bin/git"
-# end
