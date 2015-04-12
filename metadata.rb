@@ -4,7 +4,7 @@ maintainer_email 'dsalazar@iomediums.com'
 license          'All rights reserved'
 description      'Installs/Configures rack_app'
 long_description 'Installs/Configures rack_app'
-version          '0.1.0'
+version          '0.1.1'
 
 depends 'packagecloud', '~> 0.0.17'
 depends 'nginx', '~> 2.7.6'
