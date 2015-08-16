@@ -9,10 +9,14 @@
 
 ns = node['ns'] # Namespace
 
+execute 'apt-get update'
+
 package_version = [
-  node[ns]['ruby']['version'], 
-  node[ns]['passenger']['version'], 
+  node[ns]['ruby']['version'],
+  node[ns]['passenger']['version'],
   node[ns]['nginx']['version']]
+
+package 'build-essential'
 
 packagecloud_repo 'dsalazar/iomediums' do
   type 'deb'
