@@ -7,5 +7,7 @@ passenger_min_instances <%= node['nginx']['passenger']['min_instances'] %>;
 passenger_max_instances_per_app <%= node['nginx']['passenger']['max_instances_per_app'] %>;
 passenger_pool_idle_time <%= node['nginx']['passenger']['pool_idle_time'] %>;
 passenger_max_requests <%= node['nginx']['passenger']['max_requests'] %>;
+passenger_default_user <%= node['nginx']['passenger']['user'] %>;
+passenger_default_group <%= node['nginx']['passenger']['group'] %>;
 passenger_app_env <%= node.chef_environment %>;
 passenger_user_switching off;

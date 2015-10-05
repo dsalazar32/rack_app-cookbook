@@ -12,3 +12,6 @@ override['nginx']['src_binary']           = node['nginx']['binary']
 override['nginx']['pid']                  = '/var/run/nginx.pid'
 override['nginx']['passenger']['ruby']    = "#{install_path}/bin/ruby"
 override['nginx']['passenger']['root']    = "#{install_path}/lib/ruby/gems/2.2.0/gems/passenger-#{passenger_version}"
+
+default['nginx']['passenger']['user']     = "deploy"
+default['nginx']['passenger']['group']     = "deploy"
